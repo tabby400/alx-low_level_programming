@@ -22,7 +22,7 @@ int main(void)
 				putchar(' ');
 				putchar((p / 10) + '0');
 				putchar((p % 10) + '0');
-				if (i != 98 && p != 99)
+				if (i != 98 || p != 99)
 				{
 					putchar(',');
 					putchar(' ');
