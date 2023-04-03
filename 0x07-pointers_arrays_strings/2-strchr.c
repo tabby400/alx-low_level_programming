@@ -6,7 +6,7 @@
  * @s: string to be checked for character
  * @c: character to be located in string
  *
- * Return: string with character c
+ * Return: Always 0
  */
 
 char *_strchr(char *s, char c)
@@ -18,5 +18,5 @@ char *_strchr(char *s, char c)
 		if (s[p] == c)
 			return (&s[p]);
 	}
-	return ('\0');
+	return (0);
 }
