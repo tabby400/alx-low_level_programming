@@ -31,11 +31,11 @@ int is_prime_number(int n)
 
 int show_prime(int n, int i)
 {
-	if (1 == 1)
+	if (i == 1)
 	{
 		return (1);
 	}
-	else if ( n % i == 0 && i > 0)
+	else if (n % i == 0 && i > 0)
 	{
 		return (0);
 	}
