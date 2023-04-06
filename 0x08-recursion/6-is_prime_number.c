@@ -1,6 +1,6 @@
 #include "main.h"
 
-int show_prime(int, int);
+int show_prime(int n, int i);
 
 /**
  * is_prime_number - function that shows if a number is prime number
@@ -12,7 +12,7 @@ int show_prime(int, int);
 
 int is_prime_number(int n)
 {
-	if (n <= 0)
+	if (n <= 1)
 	{
 		return (0);
 	}
