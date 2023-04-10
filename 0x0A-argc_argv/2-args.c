@@ -2,19 +2,22 @@
 #include "main.h"
 
 /**
- * main - program prints all arguments it receives
+ * main - program that prints all arguments it receives
  *
- * @argc: the number of arguments passed in program
+ * @argc: the number of arguments in program
  * @argv: the arguments passed in the program
  *
  * Return: Always 0
  */
 
-int main(int argc, char *argv[]__attribute__((unused)))
+int main(int argc, char *argv[])
 {
-	/*argc - 1 because if whole argc is printed it will be null*/
-	printf("%d\n", argc - 1);
+	int p = 0;
 
+	for (p = 0 ; p < argc ; p++)
+	{
+		printf("%s\n", argv[p]);
+	}
 	return (0);
 
 }
