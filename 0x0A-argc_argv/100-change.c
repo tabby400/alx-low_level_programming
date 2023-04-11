@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	int p;
 	int product;
 	int unlimcoins[5] = {25, 10, 5, 2, 1};
-	
+
 	/*number of arguments passed to program should be 1*/
 	if (argc != 2)
 	{
