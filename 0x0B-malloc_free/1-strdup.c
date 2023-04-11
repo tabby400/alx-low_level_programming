@@ -31,7 +31,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		for (p = 0 ; p < h ; p++)
+		for (p = 0 ; str[p] ; p++)
 		{
 			cpstr[p] = str[p];
 		}
