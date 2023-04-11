@@ -20,10 +20,11 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	for (h = 0 ; str[h] != '\0' ; h++)
-	{
-		cpstr = malloc(sizeof(char) * (h + 1));
-	}
+
+	h = 0;
+	while (str[h] != '\0')
+		h++;
+	cpstr = malloc(sizeof(char) * (h + 1));
 	/*check if copied string is found*/
 	if (cpstr == NULL)
 	{
