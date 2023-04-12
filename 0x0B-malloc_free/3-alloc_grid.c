@@ -22,13 +22,14 @@ int **alloc_grid(int width, int height)
 	if (height < 0)
 		return (NULL);
 
-	arri = malloc(sizeof(int *) * height);
+	arri = (int **)malloc(sizeof(int *) * height);
 	if (arri == NULL)
+	{
 		return (NULL);
-
+	}
 	for (p = 0 ; p < height ; p++)
 	{
-		arri[p] = malloc(sizeof(int) * width);
+		arri[p] = (int *) malloc(sizeof(int) * width);
 
 		if (arri[p] == NULL)
 		{
