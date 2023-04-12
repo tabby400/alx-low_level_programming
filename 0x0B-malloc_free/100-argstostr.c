@@ -29,6 +29,7 @@ char *argstostr(int ac, char **av)
 	{
 		for (p = 0 ; av[t][p] != '\0' ; p++)
 			count++;
+		count++;
 	}
 	/*allocating memory for concatenated arguments*/
 	conc = malloc(sizeof(char) * (count + 1));/*size of arguments*/
