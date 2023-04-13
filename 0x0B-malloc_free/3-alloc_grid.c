@@ -12,40 +12,42 @@
 
 int **alloc_grid(int width, int height)
 {
-	int p;
-	int b;
+	int i, m, n, q;
 	int **arri;
 
-	/*avoiding negative numbers*/
-	if (width < 0)
-		return (NULL);
-	if (height < 0)
-		return (NULL);
-
-	arri = (int **)malloc(sizeof(int *) * height);
-	if (arri == NULL)
+	/*to avoid  0 or negative*/
+	if (width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
-	for (p = 0 ; p < height ; p++)
+	else
 	{
-		arri[p] = (int *) malloc(sizeof(int) * width);
-
-		if (arri[p] == NULL)
+		/*allocate memory using pointer to the height first*/
+		arri = (int **)malloc(sizeof(int *) * height);
+		if (arri == NULL)
 		{
 			free(arri);
-			for (b = 0; b <= p ; b++)
-				free(arri[b]);
 			return (NULL);
 		}
-	}
-	for (p = 0 ; p < height ; p++)
-	{
-		for (b = 0 ; b < width ; b++)
+		for (i = 0 ; i < height ; i++)
 		{
-			arri[p][b] = 0;
+			/*allocating memory using pointer for width*/
+			arri[i] = (int *)malloc(sizeof(int *) * width);
+			if (arri[i] == NULL)
+			{
+				for (m = 0 ; m <= i ; m++)
+					free(arri[m]);
+				free(arri);
+				return (NULL);
+			}
 		}
+		for (n = 0 ; n < height ; n++)
+		{
+			for (q = 0 ; q < width ; q++)
+			{
+				arri[n][q] = 0;
+			}
+		}
+		return (arri);
 	}
-	return (arri);
-
 }
