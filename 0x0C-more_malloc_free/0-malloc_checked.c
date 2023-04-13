@@ -11,20 +11,13 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void *ptr;
-		
 
-		
-	ptr = malloc(b);
-		
+	void *mallpointer;
 
-		
-	if (ptr == NULL)
-		
+	mallpointer = malloc(b);
+	if (mallpointer == NULL)
+	{
 		exit(98);
-		
-
-		
-	return (ptr);
-
+	}
+	return (mallpointer);
 }
