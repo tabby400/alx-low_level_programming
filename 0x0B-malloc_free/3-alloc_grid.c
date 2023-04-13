@@ -32,7 +32,7 @@ int **alloc_grid(int width, int height)
 		for (i = 0 ; i < height ; i++)
 		{
 			/*allocating memory using pointer for width*/
-			arri[i] = (int *)malloc(sizeof(int *) * width);
+			arri[i] = (int *)malloc(sizeof(int) * width);
 			if (arri[i] == NULL)
 			{
 				for (m = 0 ; m <= i ; m++)
