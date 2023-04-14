@@ -29,6 +29,6 @@ int *array_range(int min, int max)
 	p = 0;
 
 	while (p <= max - min)
-		intarr[p++] = q++;
+		intarr[p++] = q++;/*should be ordered from min to max*/
 	return (intarr);
 }
