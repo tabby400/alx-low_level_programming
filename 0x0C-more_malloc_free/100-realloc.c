@@ -31,13 +31,15 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (0);
 	}
+	if (new_size == old_size)
+	{
+		return (ptr);
+	}
 	new = malloc(new_size);
 	if (new == NULL)
 	{
 		return (0);
 	}
-	if (new_size == old_size)
-		return (ptr);
 	/*if new_size is > old_size new memory shouldnt be initialized*/
 	for (p = 0 ; p < (new_size || p < old_size) ; p++)
 	{
