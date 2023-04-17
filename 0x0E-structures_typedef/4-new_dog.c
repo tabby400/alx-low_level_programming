@@ -19,7 +19,7 @@ int _strlen(char *string)
 }
 
 /**
- * _strcopy - function that copies the string src shows it
+ * _strcpy - function that copies the string src shows it
  *           to where desst shows it
  * @src: contains the string to be copied
  * @dest: pointer to where the string is to be copied
@@ -27,7 +27,7 @@ int _strlen(char *string)
  * Return: dest
  */
 
-char *_strcopy(char *src, char *dest)
+char *_strcpy(char *src, char *dest)
 {
 	int p = 0;
 
@@ -75,9 +75,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free((*nwdog).name);
 		return (NULL);
 	}
-	(*nwdog).name = _strcopy((*nwdog).name, name);
+	(*nwdog).name = _strcpy((*nwdog).name, name);
 	(*nwdog).age = age;
-	(*nwdog).owner = _strcopy((*nwdog).owner, owner);
+	(*nwdog).owner = _strcpy((*nwdog).owner, owner);
 
 	return (nwdog);
 
