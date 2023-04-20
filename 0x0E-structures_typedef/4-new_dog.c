@@ -29,12 +29,17 @@ int _strlen(char *string)
 
 char *_strcpy(char *dest, char *src)
 {
-	int p = 0;
+	int length = 0, p;
 
-	for (p = 0 ; src[p] ; p++)
+	while (src[length] != '\0')
+	{
+		length++
+	}
+	for (p = 0 ; p < length ; p++)
 	{
 		dest[p] = src[p];
 	}
+	dest[p] = '\0';
 
 	return (dest);
 }
