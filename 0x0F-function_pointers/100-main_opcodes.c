@@ -36,10 +36,10 @@ int main(int argc, char *argv[])
 	{
 		if (n == p - 1)
 		{
-			printf("%.2hhx\n", array[p]);
+			printf("%.2hhx\n", array[n]);
 			break;
 		}
-		printf("%.2hhx ", array[p]);
+		printf("%.2hhx ", array[n]);
 	}
 
 	return (0);
