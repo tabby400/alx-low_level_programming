@@ -33,7 +33,7 @@ char *_strcpy(char *dest, char *src)
 
 	while (src[length] != '\0')
 	{
-		length++
+		length++;
 	}
 	for (p = 0 ; p < length ; p++)
 	{
