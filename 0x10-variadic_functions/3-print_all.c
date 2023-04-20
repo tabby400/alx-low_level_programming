@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 
 	va_start(any, format);
 
-	if (format != NULL)
+	if (format)
 	{
 		while (format[p])
 		{
