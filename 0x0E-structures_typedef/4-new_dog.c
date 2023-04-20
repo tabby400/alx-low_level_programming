@@ -27,7 +27,7 @@ int _strlen(char *string)
  * Return: dest
  */
 
-char *_strcpy(char *src, char *dest)
+char *_strcpy(char *dest, char *src)
 {
 	int p = 0;
 
