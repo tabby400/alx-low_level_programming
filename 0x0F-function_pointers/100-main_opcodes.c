@@ -4,8 +4,8 @@
 /**
  * main - program that prints the opcodes of its own
  *          main function
- * @argc: this the number of argumrnts in program
- * @argv: this includes the arguments ppassed in the program
+ * @argc: this the number of arguments in program
+ * @argv: this includes the arguments passed in the program
  *
  * Return: Always 0
  */
