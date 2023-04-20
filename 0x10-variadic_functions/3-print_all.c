@@ -8,7 +8,7 @@
  * @format: the list of types of arguments passed
  * @...: a variable number of anything that can be printed
  *
- * Return: void
+ * Return: nothing
  */
 
 void print_all(const char * const format, ...)
