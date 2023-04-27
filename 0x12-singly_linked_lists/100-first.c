@@ -3,7 +3,7 @@
 void __attribute__((constructor)) b4main(void);
 
 /**
- * b4main - prints the string before main function is
+ * b4main - print the string before main function is
  *           executed
  *
  */
