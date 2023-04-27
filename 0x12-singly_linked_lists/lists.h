@@ -6,9 +6,9 @@
 
 /**
  * struct list_s -  the singly linked list
- * @string: the string to create space for
- * @length: the length of entire string
- * @nextnode: shows the next linked node
+ * @str: the string to create space for
+ * @len: the length of entire string
+ * @next: shows the next linked node
  */
 
 typedef struct list_s
@@ -16,7 +16,7 @@ typedef struct list_s
 	char *str;
 	unsigned int len;
 	struct list_s *next;
-}list_t;
+} list_t;
 
 size_t list_len(const list_t *h);
 size_t print_list(const list_t *h);
