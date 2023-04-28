@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_listint - a function that prints all elements of
+ * print_listint - a function that prints all elements of the
  *                 listint_t list
  * @h: points to the the linked list called listint_t
  *
