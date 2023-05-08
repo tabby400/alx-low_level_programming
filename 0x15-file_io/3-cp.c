@@ -93,7 +93,6 @@ int main(int argc, char *argv[])
 		free(buff);
 		_closefile(b4);
 		_closefile(after);
-
 		return (0);
 }
 
