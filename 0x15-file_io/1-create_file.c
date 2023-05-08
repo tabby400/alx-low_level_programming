@@ -2,7 +2,7 @@
 
 
 /**
- * create_file - a function which creates a file
+ * create_file - a function involved in creates a file
  *
  * @filename: a pointer to the file to be created
  * @text_content: points to the string to be written inside the file
