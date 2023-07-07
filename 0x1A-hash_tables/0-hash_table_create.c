@@ -11,26 +11,26 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int p;
-	hash_table_t *hashtable;
+	hash_table_t *ht;
 
-	hashtable = malloc(sizeof(hash_table_t)); /*allocate memory*/
+	ht = malloc(sizeof(hash_table_t)); /*allocate memory*/
 
-	if (!hashtable)
+	if (!ht)
 	{
 		return (NULL); /*check if memory was really allocated*/
 	}
 
-	hashtable->size = size;
+	ht->size = size;
 
-	hashtable->array = malloc(size * sizeof(hash_node_t *));
-	if (!hashtable->array)
+	ht->array = malloc(size * sizeof(hash_node_t *));
+	if (!ht->array)
 	{
-		free(hashtable);
+		free(ht);
 		return (NULL);
 	}
 
 	for (p = 0 ; p < size ; p++)
-		hashtable->array[p] = NULL;/*all elements set to NULL all empty*/
+		ht->array[p] = NULL;/*all elements set to NULL all empty*/
 
-	return (hashtable);
+	return (ht);
 }
