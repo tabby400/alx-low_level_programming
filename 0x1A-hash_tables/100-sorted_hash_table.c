@@ -23,7 +23,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 
 	hashtable->size = size;
 
-	ht->array = malloc(sizeof(shash_node_t *) * size);
+	hashtable->array = malloc(sizeof(shash_node_t *) * size);
 	if (!hashtable->array)
 	{
 		return (NULL);
@@ -60,10 +60,10 @@ void shash_table_print(const shash_table_t *ht)
 	{
 		printf("'%s': '%s'", curr->key, curr->value);
 		curr = curr->snext;
-		if (node != NULL)
+		if (curr != NULL)
 			printf(", ");
 	}
-	printf("}\n");
+	printf("}\n"); /*closing*/
 }
 
 
@@ -87,11 +87,11 @@ void shash_table_print_rev(const shash_table_t *ht)
 
 	curr = ht->stail; /*in reverse*/
 	printf("{");
-	while (node)
+	while (curr)
 	{
 		printf("'%s': '%s'", curr->key, curr->value);
 		curr = curr->sprev;
-		if (node != NULL)
+		if (curr != NULL)
 			printf(", ");
 	}
 	printf("}\n");
