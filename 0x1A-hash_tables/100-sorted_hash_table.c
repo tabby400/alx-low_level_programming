@@ -96,3 +96,71 @@ void shash_table_print_rev(const shash_table_t *ht)
 	}
 	printf("}\n");
 }
+
+/**
+ * shash_table_delete - function used to delete an
+ * ordered hash table
+ *
+ * @ht: points to the sorted hash table
+ *
+ * Return: Nothing
+ */
+
+void shash_table_delete(shash_table_t *ht)
+{
+	shash_node_t *curr_nd;
+	shash_node_t *nxt;
+	shash_table_t *hd = ht;
+
+	if (!ht)
+	{
+		return;
+	}
+
+	curr_nd = ht->shead;
+	while (curr_nd != NULL)
+	{
+		nxt = curr_nd->snext;
+		free(curr_nd->key);
+		free(curr_nd->value);
+		free(curr_nd);
+		curr_nd = nxt; /*loop continues*/
+	}
+
+	free(hd->array);
+	free(hd); /*free table*/
+}
+
+/**
+ * shash_table_get - get the value of a key in an
+ * ordered hash table
+ *
+ * @ht: points to the ordered hash table.
+ * @key: key with the value to get
+ *
+ * Return: the value associated with key otherwise NULL
+ */
+
+char *shash_table_get(const shash_table_t *ht, const char *key)
+{
+	unsigned long int x;
+	shash_node_t *curr_nd;
+
+	if (!ht || !key || *key == '\0')
+	{
+		return (NULL);
+	}
+
+	x = key_index((const unsigned char *)key, ht->size);
+	if (x >= ht->size)
+	{
+		return (NULL);
+	}
+
+	curr_nd = ht->shead;
+	while (curr_nd != NULL && strcmp(curr_nd->key, key) != 0)
+		curr_nd = curr_nd->snext;
+
+	return ((curr_nd == NULL) ? NULL : curr_nd->value); /*if found bring value*/
+}
+
