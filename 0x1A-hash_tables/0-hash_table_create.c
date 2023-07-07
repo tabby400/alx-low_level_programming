@@ -5,32 +5,32 @@
  *
  * @size: this is the array size
  *
- * Return: pointer to the newly craetyed hash table
+ * Return: pointer to the newly created hash table
  */
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int p;
-	hash_table_t *ht;
+	hash_table_t *hashtable;
 
-	ht = malloc(sizeof(hash_table_t)); /*allocate memory*/
+	hashtable = malloc(sizeof(hash_table_t)); /*allocate memory*/
 
-	if (!ht)
+	if (!hashtable)
 	{
 		return (NULL); /*check if memory was really allocated*/
 	}
 
-	ht->size = size;
+	hashtable->size = size;
 
-	ht->array = malloc(size * sizeof(hash_node_t *));
-	if (!ht->array)
+	hashtable->array = malloc(size * sizeof(hash_node_t *));
+	if (!hashtable->array)
 	{
-		free(ht);
+		free(hashtable);
 		return (NULL);
 	}
 
 	for (p = 0 ; p < size ; p++)
-		ht->array[p] = NULL;/*all elements set to NULL all empty*/
+		hashtable->array[p] = NULL;/*all elements set to NULL all empty*/
 
-	return (ht);
+	return (hashtable);
 }
