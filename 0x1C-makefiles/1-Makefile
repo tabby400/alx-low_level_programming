@@ -3,5 +3,5 @@ CC = gcc
 
 
 all:
-	$(SRC) $(CC) -o school
+	$(CC) $(SRC) -o school
 
