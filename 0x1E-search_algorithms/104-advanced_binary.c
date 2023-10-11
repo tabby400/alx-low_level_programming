@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * recursive_search - this function searches in a 
+ * recursive_search - this function searches in a
  * recursive way a val in a sorted array
  *
  * @array: points to first element in the array.
