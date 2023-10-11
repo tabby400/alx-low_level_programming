@@ -1,3 +1,7 @@
+#include "search_algos.h"
+#include <stddef.h>
+#include <math.h>
+
 /**
  * jump_search - this function searches for int in a sorted array
  *
